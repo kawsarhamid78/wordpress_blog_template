@@ -3,6 +3,7 @@ Wordpress Blog Templates
 I have 2 web repositories to store my wordpress blogs:
 
 > [http://williamjxj.com](http://williamjxj.com)
+
 > [http://williamjxj.wordpress.com/](http://williamjxj.wordpress.com/)
 
 Sometimes I am boring to post the same content twice, especially when the content is longer.
