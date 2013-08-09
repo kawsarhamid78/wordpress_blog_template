@@ -1,6 +1,7 @@
 <%@LANGUAGE="JAVASCRIPT" CODEPAGE="65001"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/wordpress.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/wordpress.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
@@ -11,9 +12,95 @@
 <!-- InstanceBeginEditable name="EditRegion3" -->
 <div style="width:610px;overflow:auto;border:1px inset #666;background-color:#eee;padding:2px;">
   <h4></h4>
-  <pre style="font-size:12px;border-left:1px solid #ccc;line-height:20px;background:url(http://williamjxj.files.wordpress.com/2010/11/pre_code_bg_ylw.gif) repeat-y left top;width:500px;overflow:auto;margin:20px;padding:0;">
-        <code style="display:block;background-color:transparent;color:#000;margin:0 0 0 40px;padding:18px 0;"></code></pre>
+  <div class="date-outer">
+    <div class="date-posts">
+      <div class="post-outer">
+        <div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+          <div class="post-body entry-content" id="post-body-2996016420237723574" itemprop="description articleBody"> <span>What follows is my </span><span style="font-weight: bold;">.exrc</span><span> file for various versions of vi, and some more related stuff.  I have yet to look through the <a href="http://www.vim.org/">vim</a> documentation exhasutively to see if there are any more useful options -- this is just stuff I have gleaned from random places on the Internet and from friends.</span><br>
+            <br>
+            <span style="font-style: italic;">Plain vanilla vi (as on Solaris)</span><br>
+            <span style="font-weight: bold;">set nu </span> " show line numbers<br>
+            <span style="font-weight: bold;">set ts=4 </span> " tabs take up four columns<br>
+            <span style="font-weight: bold;">set sw=4 </span> " set shiftwidth (&gt;&gt; or &lt;&lt;) to 4 columns <span style="font-weight: bold;">set showmatch </span> " show matches of ()'s, {}'s, and []'s<br>
+            <span style="font-weight: bold;">set showmode </span> " show what mode (e.g. INSERT) you're in<br>
+            <span style="font-weight: bold;">set autoindent </span> " indent to the extent of the previous line<br>
+            <br>
+            <span style="font-style: italic;">Vim:</span><br>
+            <span style="font-weight: bold;"> syntax enable </span> " enables syntax highlighting<br>
+            <span style="font-weight: bold;"> set nu </span> " show line numbers<br>
+            <span style="font-weight: bold;"> set ts=4 </span> " tabs take up four columns<br>
+            <span style="font-weight: bold;"> set sw=4 </span> " set shiftwidth (&gt;&gt; or &lt;&lt;) to 4 columns <span style="font-weight: bold;"><br>
+            set title </span> " sets title of terminal in menubar to that of file currently being edited<br>
+            <span style="font-weight: bold;"> set expandtab</span> " tabs aren't really tabs, but many spaces<br>
+            <span style="font-weight: bold;"> set softtabstop=4 </span> " delete four spaces when you delete a "tab"<br>
+            <span style="font-weight: bold;"> set ignorecase </span> " perform case-insensitive searches...<br>
+            <span style="font-weight: bold;"> set smartcase </span> " ... unless there are capitalized characters in the search pattern<br>
+            <span style="font-weight: bold;"> set mousehide </span> " hide the mouse when editing<br>
+            <span style="font-weight: bold;"> set exrc </span> " eliminates the possibility of another .exrc getting confused with mine on multi-user systems<br>
+            <span style="font-weight: bold;"> set backspace=indent,eol,start </span> "explicitly makes the backspace work when at the beginning of a line<br>
+            <span style="font-weight: bold;"> set bg=light </span> "this almost always looks better -- take this out or set it to dark if things look funny<br>
+            <span style="font-weight: bold;">set nohlsearch </span>"no annoying search highlighting<br>
+            <br>
+            " for common typos<br>
+            <span style="font-weight: bold;"> command! Q quit</span><br>
+            <span style="font-weight: bold;"> command! W write</span><br>
+            <span style="font-weight: bold;"> command! Wq wq</span><br>
+            <br>
+            <span style="font-style: italic;">Vim Python</span><br>
+            <span style="font-weight: bold;"> set autoindent</span> " indent to the extent of the previous line<br>
+            <br>
+            <span style="font-style: italic;"> Vim C/C++/Java</span><br>
+            <span style="font-weight: bold;"> set cindent</span> " indenting for C-style languages<br>
+            <span style="font-weight: bold;">set showmatch </span>" show matches of ()'s, {}'s, and []'s<br>
+            <br>
+            <span style="font-style: italic;">For Text (Vim 7.0 only)<br>
+            <span style="font-weight: bold;"><span style="font-style: italic;"><span style="font-style: italic;"></span></span></span></span><span style="font-weight: bold;">setlocal spell spelllang=en_us</span> " English(US) spellcheck on (Vim 7.x only)<br>
+            <span style="font-weight: bold;">set tw=0 wrap linebreak</span> " don't split words between lines, only wrap at end of word<br>
+            "lots of abbreviations (varies depending on the subject material)<br>
+            <span style="font-weight: bold;">ab STIA Science, Technology and International Affairs</span><span style="font-style: italic;"><span style="font-weight: bold;"><span style="font-style: italic;"><span style="font-style: italic;"></span></span></span><br>
+            </span><br>
+            <span style="font-style: italic;"> How to produce nicely formatted C code in Vim (From p.221 of </span><a style="font-style: italic;" title="Learning the vi editor" href="http://www.amazon.com/Learning-Editor-6th-Arnold-Robbins/dp/1565924266/ref=pd_bbs_sr_1/102-7890135-6992916?ie=UTF8&amp;s=books&amp;qid=1175918735&amp;sr=8-1">Learning the vi editor</a><span style="font-style: italic;">):</span><br>
+            <span style="font-weight: bold;"> set nocp incsearch</span><br>
+            <span style="font-weight: bold;"> set cinoptions=:0,p0,t0</span><br>
+            <span style="font-weight: bold;"> set cinwords=if,else,while,do,for,switch,case</span><br>
+            <span style="font-weight: bold;"> set formatoptions=tcqr</span><br>
+            <span style="font-weight: bold;"> set cindent</span><br>
+            <span style="font-weight: bold;"> syntax on</span><br>
+            <span style="font-weight: bold;"> source ~/.exrc</span><br>
+            <br>
+            <span style="font-style: italic;"> Options set when vim 6.4/7 starts on my system (Ubuntu Linux):</span><br>
+            <span style="font-weight: bold;"> helplang=en</span> " language to display help in<br>
+            <span style="font-weight: bold;"> ruler</span> " show row and column in bottom right<br>
+            <span style="font-weight: bold;"> ttyfast </span>" indicates a fast terminal connection<br>
+            <span style="font-weight: bold;"> viminfo='20,"50</span> " configuration info<br>
+            <span style="font-weight: bold;"> history=50 </span>" number of : commands and previous search patters to be remembered<br>
+            <span style="font-weight: bold;"> scroll=32</span> " number of lines to scroll with CRTL-U and CTRL-D commands<br>
+            <span style="font-weight: bold;"> ttymouse=xterm2 </span>" mouse codes<br>
+            <span style="font-weight: bold;"> backspace=indent,eol,start </span>"explicitly makes the backspace work when at the beginning of a line<br>
+            <span style="font-weight: bold;"> fileencodings=ucs-bom,utf-8,latin1</span> " list of character encodings considered when starting to edit a file<br>
+            <span style="font-weight: bold;"> printoptions=paper:letter</span> " controls format and output of printing<br>
+            <span style="font-weight: bold;">runtimepath=~/.vim,/usr/share/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vimcurrent,/usr/share/vim/vimfiles/after,/usr/share/vim/addons/after,~/.vim/after</span> " list of directories which will be searched for runtime files<br>
+            <span style="font-weight: bold;"> suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc </span>" Files with these suffixes get a lower priority when multiple files match a wildcard.<br>
+            <br>
+            <span style="font-style: italic;">Cool stuff that I have seen various places but I didn't find particularly useful (maybe someone else will):</span><br>
+            <span style="font-weight: bold;">set list </span> "replaces all EOLs and TABs with $ and ^I<span style="font-weight: bold;"></span><br>
+            "auto-complete of brackets<br>
+            <span style="font-weight: bold;">inoremap [ [] &lt;left&gt;</span><br>
+            <span style="font-weight: bold;">inoremap ( () &lt;left&gt;</span><br>
+            <span style="font-weight: bold;">inoremap { {} &lt;left&gt;</span><br>
+            <span style="font-weight: bold;">inoremap " "" &lt;left&gt;</span><br>
+            <span style="font-weight: bold;">inoremap ' '' &lt;left&gt;</span><br>
+            <br>
+            To see the options vi(m) has enabled, enter <span style="font-weight: bold;">:set</span><br>
+            To get help with options in Vim, enter <span style="font-weight: bold;">:help set</span> or <span style="font-weight: bold;">:set all </span>for regular vi<br>
+            Or just <span style="font-weight: bold;">:help</span> for the help contents... Vim has excellent documentation<br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
